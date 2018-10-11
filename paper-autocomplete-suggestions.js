@@ -1,3 +1,28 @@
+import '@polymer/polymer/polymer-legacy.js';
+
+import '@polymer/paper-item/paper-item.js';
+import '@polymer/paper-ripple/paper-ripple.js';
+import '@polymer/paper-material/paper-material.js';
+import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
+import { html } from '@polymer/polymer/lib/utils/html-tag.js';
+import { Templatizer } from '@polymer/polymer/lib/legacy/templatizer-behavior.js';
+import { dom, flush } from '@polymer/polymer/lib/legacy/polymer.dom.js';
+import { Element } from '@polymer/polymer/polymer-element.js';
+
+var DIRECTION = {
+  UP: 'up',
+  DOWN: 'down'
+};
+
+var KEY_CODES = {
+  LEFT_ARROW: 37,
+  RIGHT_ARROW: 39,
+  UP_ARROW: 38,
+  DOWN_ARROW: 40,
+  ENTER: 13,
+  ESCAPE: 27
+};
+
 /**
   `paper-autocomplete-suggestions`
 
@@ -116,36 +141,6 @@
 
   @demo demo/paper-autocomplete-suggestions-demo.html
 */
-/*
-  FIXME(polymer-modulizer): the above comments were extracted
-  from HTML and may be out of place here. Review them and
-  then delete this comment!
-*/
-import '@polymer/polymer/polymer-legacy.js';
-
-import '@polymer/paper-item/paper-item.js';
-import '@polymer/paper-ripple/paper-ripple.js';
-import '@polymer/paper-material/paper-material.js';
-import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
-import { html } from '@polymer/polymer/lib/utils/html-tag.js';
-import { Templatizer } from '@polymer/polymer/lib/legacy/templatizer-behavior.js';
-import { dom, flush } from '@polymer/polymer/lib/legacy/polymer.dom.js';
-import { Element } from '@polymer/polymer/polymer-element.js';
-
-var DIRECTION = {
-  UP: 'up',
-  DOWN: 'down'
-};
-
-var KEY_CODES = {
-  LEFT_ARROW: 37,
-  RIGHT_ARROW: 39,
-  UP_ARROW: 38,
-  DOWN_ARROW: 40,
-  ENTER: 13,
-  ESCAPE: 27
-};
-
 Polymer({
   _template: html`
     <style>
