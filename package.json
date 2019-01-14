@@ -37,7 +37,6 @@
     "eslint-plugin-html": "^3.0.0",
     "sinon": "^3.0.0",
     "web-component-tester": "^6.0.1",
-    "web-component-tester-istanbul": "^0.10.0",
     "wct-browser-legacy": "^1.0.1",
     "@polymer/iron-demo-helpers": "^3.0.0",
     "@polymer/paper-toast": "^3.0.0",
