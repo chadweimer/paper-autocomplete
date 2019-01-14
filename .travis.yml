@@ -1,0 +1,14 @@
+dist: trusty
+sudo: false
+language: node_js
+node_js:
+- node
+addons:
+  chrome: stable
+cache:
+  directories:
+  - node_modules
+before_script:
+- npm install polymer-cli
+- "$(npm bin)/polymer lint"
+script: xvfb-run $(npm bin)/polymer test --module-resolution=node --npm
