@@ -7,7 +7,6 @@ import { Polymer } from '@polymer/polymer/lib/legacy/polymer-fn.js';
 import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 import { Templatizer } from '@polymer/polymer/lib/legacy/templatizer-behavior.js';
 import { dom, flush } from '@polymer/polymer/lib/legacy/polymer.dom.js';
-import { PolymerElement } from '@polymer/polymer/polymer-element.js';
 
 var DIRECTION = {
   UP: 'up',
@@ -64,7 +63,6 @@ var KEY_CODES = {
   - The query function is synchronous.
   - The API is respected and the method always return an Array.
 
-
   The template use to render each suggestion depends on the structure of each object that this method returns. For the
   default template, each suggestion should follow this object structure:
 
@@ -93,7 +91,6 @@ var KEY_CODES = {
   - `id`, `role` and `aria-selected` need to be there for accessibility reasons. If you don't set them, the component
   will continue working but it will not be accessible for user with disabilities.
 
-
   It is important to clarify that methods `_onSelect` and `_getSuggestionId` do not need to be implemented. They are
   part of the logic of `paper-autocomplete-suggestions`.
 
@@ -108,7 +105,6 @@ var KEY_CODES = {
   - All suggestions items have the same height
   - The height of each item is fixed and can be determined at any time. For example, if you want to use images in the
   results, make sure they have a placeholder or a fixed height.
-
 
   ### Styling
 
@@ -537,7 +533,7 @@ Polymer({
 
     var value = event.target.value;
 
-    if (value != null && value.length >= this.minLength) {
+    if (value !== null && value.length >= this.minLength) {
       value = value.toLowerCase();
 
       // Search for the word in the source properties.
@@ -567,7 +563,6 @@ Polymer({
    */
   _renderSuggestions: function (suggestions) {
     var suggestionsContainer = dom(this.$.suggestionsWrapper);
-    var isPolymer1 = !!PolymerElement;
 
     this._clearSuggestions();
 
@@ -577,12 +572,7 @@ Polymer({
       clone.item = result;
       clone.index = index;
 
-      // Different stamping mode based on Polymer version
-      if (isPolymer1) {
-        suggestionsContainer.appendChild(clone.root.querySelector('*'));
-      } else {
-        suggestionsContainer.appendChild(clone.root);
-      }
+      suggestionsContainer.appendChild(clone.root);
 
     }.bind(this));
   },
@@ -597,7 +587,7 @@ Polymer({
    * Listener to changes to _suggestions state
    */
   _onSuggestionsChanged: function () {
-    this.debounce('_onSuggestionChanged', function () {
+    this.debounce('_onSuggestionChanged', () => {
       this._renderSuggestions(this._suggestions);
 
       if (this._suggestions.length > 0) {

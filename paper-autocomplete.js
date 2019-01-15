@@ -450,7 +450,7 @@ Polymer({
 
   _sourceChanged: function (newSource) {
     var text = this.text;
-    if (!Array.isArray(newSource) || newSource.length === 0 || text == null || text.length < this.minLength) {
+    if (!Array.isArray(newSource) || newSource.length === 0 || text === null || text.length < this.minLength) {
       return;
     }
     if (!this.$.autocompleteInput.focused) {

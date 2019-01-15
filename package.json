@@ -25,8 +25,8 @@
   "license": "MIT",
   "scripts": {
     "start": "polymer serve -o",
-    "test": "polymer test --plugin local",
-    "test:remote": "polymer test --plugin sauce",
+    "test": "polymer test --module-resolution=node --npm --plugin local",
+    "test:remote": "polymer test --module-resolution=node --npm --plugin sauce",
     "lint": "eslint --cache paper-autocomplete*.js test/paper*.js && polymer lint paper-autocomplete*.js --rules polymer-3",
     "publish-docs": "./publish-docs.sh",
     "variants": "polymer install --variants && polymer serve -o -H 0.0.0.0",
@@ -35,6 +35,7 @@
   "devDependencies": {
     "eslint": "^4.0.0",
     "eslint-plugin-html": "^3.0.0",
+    "polymer-cli": "^1.9.0",
     "sinon": "^3.0.0",
     "wct-browser-legacy": "^1.0.1",
     "@polymer/iron-demo-helpers": "^3.0.0",
