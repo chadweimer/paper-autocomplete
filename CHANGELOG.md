@@ -2,6 +2,11 @@
 
 This component follows *Semantic Versioning* (aka SemVer), visit (http://semver.org/) to learn more about it.
 
+## Release 4.0.0 (2019-01-15)
+### New Features
+- Use polymer modulizer to upgrade to Polymer 3
+- This version can only be used with Polymer 3; drops support for Polymer 1 and 2
+
 ## Release 3.7.0 (2018-04-15)
 ### New Features
 - Add Setter/getter manually invalid input. Thanks to [@herberthobregon](https://github.com/herberthobregon).
@@ -9,7 +14,7 @@ This component follows *Semantic Versioning* (aka SemVer), visit (http://semver.
 
 ## Release 3.6.0 (2018-02-2813)
 ### Bug Fixes
-- Fix removed the `readOnly` attribute from the `focused` property. This was causing that the value was not being updated. Thanks to 
+- Fix removed the `readOnly` attribute from the `focused` property. This was causing that the value was not being updated. Thanks to
 [@programmer4web](https://github.com/programmer4web).
 ### New Features
 - New `selected` property has been added that exposes the current selected value. Thanks to [@programmer4web](https://github.com/programmer4web).
@@ -66,7 +71,7 @@ put your `<style>` inside the custom template `<template>` tag.
 - The component has been transformed to work in *hybrid mode*, which means that the component is now compatible with
 both Polymer 1.x and Polymer 2.x.
 
-*Special thanks to everyone who has contributed to this version. Specially *@ajbarriosleon, @kamte* who did most of 
+*Special thanks to everyone who has contributed to this version. Specially *@ajbarriosleon, @kamte* who did most of
 heavy-lifting at the beginning of this new version.
 
 ### Known Issues
@@ -76,7 +81,7 @@ This is a temporary workaround until this issue is fixed: https://github.com/Pol
 ## Release 2.6.1 (2017-06-10)
 
 ### Bug Fixes
-- Private property `_bindedFunctions` inside `paper-autocomplete-suggestions` was being shared between all 
+- Private property `_bindedFunctions` inside `paper-autocomplete-suggestions` was being shared between all
 instances. This now has been solved thanks to [@plequang](https://github.com/plequang).
 
 ## Release 2.6.0 (2017-05-31)
@@ -104,7 +109,7 @@ recommendations (thanks to @alejost848).
 - X button to clear is now a paper-input suffix.
 
 ### Bug Fixes
-- Hiding native clear X button in the input in IE/Edge. Fixes #24 
+- Hiding native clear X button in the input in IE/Edge. Fixes #24
 
 ## Release 2.4.0 (2017-02-22)
 
@@ -118,7 +123,7 @@ Thanks to @jimivdw.
 ## Release 2.3.1 (2017-02-13)
 
 ### Bug Fixes
-- The `--paper-input-container-focus-color` default value is no longer hardcoded to a specific color (`#2196f3`). 
+- The `--paper-input-container-focus-color` default value is no longer hardcoded to a specific color (`#2196f3`).
 Now it is set by default to `var(--primary-color)`.
 
 ## Release 2.3.0 (2017-02-08)
@@ -155,7 +160,7 @@ and user clicks in the scrollbar to scroll over results.
 ## Release 2.1.2 (2016-12-07)
 
 ### Bug Fixes
-- `text` and `value` were not set when a selection was made. This is now fixed. 
+- `text` and `value` were not set when a selection was made. This is now fixed.
 
 ## Release 2.1.1 (2016-11-29)
 
@@ -173,7 +178,7 @@ etc. This allows using the autocomplete functionality with any input field.
 this issue is being investigated).
 
 ### Bug Fixes
-- When user pressed `left` or `right` key when a component was highlighted, the state was reset. Now the popup is 
+- When user pressed `left` or `right` key when a component was highlighted, the state was reset. Now the popup is
  ignoring those key events.
 
 ## Release 2.0.0 (2016-11-21)
@@ -186,6 +191,6 @@ this issue is being investigated).
 ### Breaking Change
 - Property `useShadowDom` has been removed because now the component works in both modes without it. You can just remove
   it from your apps. However, if you have it, nothing will break, it will just be ignored.
-  
+
 ### Bug Fixes
 - `setOption()` method was not taking into account `textProperty` and `valueProperty` options.
