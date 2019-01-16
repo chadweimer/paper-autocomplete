@@ -13,11 +13,9 @@ import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 /**
   `paper-autocomplete`
 
-  **From v3.x.x, this component only works with Polymer 1.7+ or 2.0+.**
+  **From v4.x.x, this component only works with Polymer 3.0+.**
 
-  [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/ellipticaljs/paper-autocomplete)
-
-  [![Sauce Test Status](https://saucelabs.com/browser-matrix/jhuesos.svg)](https://saucelabs.com/u/jhuesos)
+  [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/@cwmr/paper-autocomplete)
 
   paper-autocomplete extends earlier efforts such as this (https://github.com/rodo1111/paper-input-autocomplete)
   to provide keyboard support, remote binding and results scrolling.
@@ -28,10 +26,6 @@ import { html } from '@polymer/polymer/lib/utils/html-tag.js';
 
   To integrate with `iron-input`, you must set the `name` option. The selected `value` will be exposed, **not** the
   `text` value,
-
-  ### About Polymer 1.x and 2.x Compatibility
-  From version `3.x.x`, this component work with both Polymer 1.7+ or Polymer 2.0+ Please take a look to the
-  [MIGRATION.md](./MIGRATION.md) file that contains more information.
 
   ### Custom search
   This component has the public method `queryFn` that is called in each key stroke and it is responsible to query

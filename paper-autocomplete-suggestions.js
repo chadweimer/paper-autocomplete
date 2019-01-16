@@ -25,11 +25,9 @@ var KEY_CODES = {
 /**
   `paper-autocomplete-suggestions`
 
-  **From v3.x.x, this component only works with Polymer 1.7+ or 2.0+.**
+  **From v4.x.x, this component only works with Polymer 3.0+.**
 
-  [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/ellipticaljs/paper-autocomplete)
-
-  [![Sauce Test Status](https://saucelabs.com/browser-matrix/jhuesos.svg)](https://saucelabs.com/u/jhuesos)
+  [![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg)](https://www.webcomponents.org/element/@cwmr/paper-autocomplete)
 
   Allows to add autocomplete capabilities to any input field. This is desirable when you have an input field with custom
   logic and you just want to add the feature to help users with the selection. If you want to use it in combination with
@@ -49,10 +47,6 @@ var KEY_CODES = {
   It is **important to provide both `textProperty` and `valueProperty` when working with a custom search function and
   or custom templates.** They are needed to keep the component accessible and for the events (e.g. onSelect) to keep
   working.
-
-  ### About Polymer 1.x and 2.x Compatibility
-  From version `3.x.x`, this component work with both Polymer 1.7+ or Polymer 2.0+ Please take a look to the
-  [MIGRATION.md](./MIGRATION.md) file that contains more information.
 
   ### Custom search
   This component has the public method `queryFn` that is called in each key stroke and it is responsible to query
